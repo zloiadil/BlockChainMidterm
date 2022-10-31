@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffeeGif.gif" translatesAutoresizingMaskIntoConstraints="NO" id="fpi-2i-4ys">
+                                <rect key="frame" x="20" y="287" width="374" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="UE7-hA-RRm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBS-eQ-rov">
+                                <rect key="frame" x="167" y="747" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="RsD-9y-D28"/>
+                                    <constraint firstAttribute="width" constant="80" id="ved-uf-NXl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Order">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="21"/>
+                                    <color key="baseForegroundColor" red="0.12122189253568649" green="0.25597083568572998" blue="0.060622788965702057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Vww-6C-GcV" kind="show" id="a4t-oi-eJ3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Bean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUw-ua-oas">
+                                <rect key="frame" x="98.5" y="95" width="217" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fpi-2i-4ys" firstAttribute="top" secondItem="DUw-ua-oas" secondAttribute="bottom" constant="144" id="7fK-sG-05Q"/>
+                            <constraint firstItem="fpi-2i-4ys" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cb2-6L-718"/>
+                            <constraint firstItem="DUw-ua-oas" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="ENB-Ow-IjT"/>
+                            <constraint firstItem="fpi-2i-4ys" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EqQ-5B-ByS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PBS-eQ-rov" secondAttribute="bottom" constant="35" id="Naw-3z-2Ro"/>
+                            <constraint firstItem="PBS-eQ-rov" firstAttribute="centerX" secondItem="fpi-2i-4ys" secondAttribute="centerX" id="PSK-Ds-yYs"/>
+                            <constraint firstItem="DUw-ua-oas" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kjd-T8-iyr"/>
+                            <constraint firstItem="fpi-2i-4ys" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="243" id="ppd-DD-w5p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="fpi-2i-4ys" id="FQf-oM-cAV"/>
+                        <outlet property="orderButton" destination="PBS-eQ-rov" id="c0d-UO-ibd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="51.5625"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="9jj-E3-8oE">
+            <objects>
+                <viewController title="Menu" modalPresentationStyle="fullScreen" interfaceStyle="light" id="smu-Ma-DpR" customClass="SecondViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nrc-2W-BuS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="py6-Wj-5tq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z9V-ti-B03">
+                                    <size key="itemSize" width="192" height="360"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4hY-kF-h6g" customClass="MyCollectionViewCell" customModule="Coffee_Order" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="360"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A2s-IR-QdJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="192" height="360"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffeeOne" translatesAutoresizingMaskIntoConstraints="NO" id="ccG-3P-b55">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="yup-vr-yLH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Molinari Qualità Rosso" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hia-Ec-Jox">
+                                                    <rect key="frame" x="8" y="230" width="164" height="52"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                    <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr1-0A-liE">
+                                                    <rect key="frame" x="15" y="310" width="162" height="42"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="View">
+                                                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                        <color key="baseForegroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="baseBackgroundColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kr1-0A-liE" firstAttribute="top" secondItem="hia-Ec-Jox" secondAttribute="bottom" constant="28" id="3LV-If-37b"/>
+                                                <constraint firstItem="hia-Ec-Jox" firstAttribute="top" secondItem="ccG-3P-b55" secondAttribute="bottom" constant="30" id="Etd-SF-U2D"/>
+                                                <constraint firstItem="ccG-3P-b55" firstAttribute="top" secondItem="A2s-IR-QdJ" secondAttribute="top" id="GBo-jp-x5L"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kr1-0A-liE" secondAttribute="bottom" constant="8" id="P2A-66-FE5"/>
+                                                <constraint firstItem="Kr1-0A-liE" firstAttribute="leading" secondItem="A2s-IR-QdJ" secondAttribute="leading" constant="15" id="Th5-nl-kXM"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kr1-0A-liE" secondAttribute="trailing" constant="15" id="XeD-BI-Nem"/>
+                                                <constraint firstAttribute="trailing" secondItem="hia-Ec-Jox" secondAttribute="trailing" constant="20" symbolic="YES" id="Xm6-Da-Fcu"/>
+                                                <constraint firstItem="ccG-3P-b55" firstAttribute="leading" secondItem="A2s-IR-QdJ" secondAttribute="leading" id="dl2-77-NO6"/>
+                                                <constraint firstItem="hia-Ec-Jox" firstAttribute="leading" secondItem="A2s-IR-QdJ" secondAttribute="leading" constant="8" id="gtU-lu-gHd"/>
+                                                <constraint firstAttribute="trailing" secondItem="ccG-3P-b55" secondAttribute="trailing" constant="12" id="qZ1-Pd-HWY"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="192" height="360"/>
+                                        <connections>
+                                            <outlet property="itemLabel" destination="hia-Ec-Jox" id="i3I-zf-2Tb"/>
+                                            <outlet property="myImageView" destination="ccG-3P-b55" id="3Eh-li-txc"/>
+                                            <outlet property="orderButton" destination="Kr1-0A-liE" id="wRG-7E-y5N"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="smu-Ma-DpR" id="P8H-3U-dna"/>
+                                    <outlet property="delegate" destination="smu-Ma-DpR" id="8LA-W2-Vlu"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Py-Tk-vIE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="py6-Wj-5tq" secondAttribute="bottom" id="KET-J1-Ewg"/>
+                            <constraint firstItem="py6-Wj-5tq" firstAttribute="leading" secondItem="1Py-Tk-vIE" secondAttribute="leading" id="LR6-Ck-yAc"/>
+                            <constraint firstItem="py6-Wj-5tq" firstAttribute="top" secondItem="nrc-2W-BuS" secondAttribute="top" id="V6L-Qk-efK"/>
+                            <constraint firstItem="py6-Wj-5tq" firstAttribute="trailing" secondItem="1Py-Tk-vIE" secondAttribute="trailing" id="bXY-VM-31M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JeW-Ov-MiT">
+                        <barButtonItem key="rightBarButtonItem" title="Status" id="i2o-GH-gfU">
+                            <color key="tintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="iro-SG-38d" kind="show" id="5Ej-FL-0Bt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myCollectionView" destination="py6-Wj-5tq" id="EoV-cc-jzt"/>
+                        <outlet property="statusButton" destination="i2o-GH-gfU" id="MAu-Ca-FQs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXk-e0-9pw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631.8840579710147" y="51.5625"/>
+        </scene>
+        <!--Description-->
+        <scene sceneID="Aa8-Vh-JQ1">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" title="Description" modalPresentationStyle="fullScreen" id="ZIr-G2-0g4" customClass="HomeViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH5-fT-4HS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffeeOne" translatesAutoresizingMaskIntoConstraints="NO" id="BMo-bs-ikt">
+                                <rect key="frame" x="20" y="117" width="374" height="252"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="252" id="yaU-1u-eH8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Molinari Qualità Rosso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpz-9Z-qNk">
+                                <rect key="frame" x="20" y="433" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjp-2t-71D">
+                                <rect key="frame" x="138" y="726" width="137" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Order Details">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="rAU-o4-9Rv" kind="show" id="aDR-Ds-gzV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbh-1y-Yu6">
+                                <rect key="frame" x="20" y="438" width="374" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X1p-zx-KsZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BMo-bs-ikt" firstAttribute="top" secondItem="X1p-zx-KsZ" secondAttribute="top" constant="29" id="ADx-bD-4qK"/>
+                            <constraint firstItem="X1p-zx-KsZ" firstAttribute="trailing" secondItem="xpz-9Z-qNk" secondAttribute="trailing" constant="20" id="CBI-mi-nhK"/>
+                            <constraint firstItem="BMo-bs-ikt" firstAttribute="leading" secondItem="X1p-zx-KsZ" secondAttribute="leading" constant="20" id="E8x-1v-c9e"/>
+                            <constraint firstItem="xpz-9Z-qNk" firstAttribute="leading" secondItem="X1p-zx-KsZ" secondAttribute="leading" constant="20" id="ZKF-eB-ZNv"/>
+                            <constraint firstItem="X1p-zx-KsZ" firstAttribute="trailing" secondItem="BMo-bs-ikt" secondAttribute="trailing" constant="20" id="lys-G9-Xa2"/>
+                            <constraint firstItem="xpz-9Z-qNk" firstAttribute="top" secondItem="BMo-bs-ikt" secondAttribute="bottom" constant="64" id="q4t-cf-f16"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="c7C-kZ-ScI"/>
+                    <connections>
+                        <outlet property="homeDiscription" destination="Pbh-1y-Yu6" id="go9-aV-6qu"/>
+                        <outlet property="homeImage" destination="BMo-bs-ikt" id="UWt-0f-WrO"/>
+                        <outlet property="homeLabel" destination="xpz-9Z-qNk" id="35O-ky-thY"/>
+                        <outlet property="homeOrderButton" destination="fjp-2t-71D" id="vi0-pt-SBC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCV-C6-MuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2379.7101449275365" y="51.5625"/>
+        </scene>
+        <!--Make Order View Controller-->
+        <scene sceneID="rcX-6g-tUL">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="rAU-o4-9Rv" customClass="MakeOrderViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sQz-Wx-qpH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Weight(kg)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOe-7U-Ef8">
+                                <rect key="frame" x="20" y="394" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of dispatch" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGZ-UX-1Bf">
+                                <rect key="frame" x="20" y="482" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The number of boxes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jx-m9-P8e">
+                                <rect key="frame" x="20" y="303" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many number of boxes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Na1-oM-d1v">
+                                <rect key="frame" x="20" y="339" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many kilograms? " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGO-Pr-SDw">
+                                <rect key="frame" x="20" y="429" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD.MM.YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JoE-fU-Ohu">
+                                <rect key="frame" x="20" y="517.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YW-qD-reI">
+                                <rect key="frame" x="133" y="728" width="149" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="frb-15-ZQj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Make Order">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="b2s-6D-fst" kind="show" id="Rhd-st-oJh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make an order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffd-kk-3CB">
+                                <rect key="frame" x="102" y="172" width="210" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gll-FM-S6D"/>
+                        <color key="backgroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Jx-m9-P8e" firstAttribute="top" secondItem="ffd-kk-3CB" secondAttribute="bottom" constant="92" id="2yP-C0-RkP"/>
+                            <constraint firstItem="Na1-oM-d1v" firstAttribute="top" secondItem="3Jx-m9-P8e" secondAttribute="bottom" constant="8.5" id="4NX-am-2Uj"/>
+                            <constraint firstItem="JoE-fU-Ohu" firstAttribute="leading" secondItem="Gll-FM-S6D" secondAttribute="leading" constant="20" id="5SF-82-uhe"/>
+                            <constraint firstItem="vGZ-UX-1Bf" firstAttribute="top" secondItem="vGO-Pr-SDw" secondAttribute="bottom" constant="19" id="6bb-0W-KyH"/>
+                            <constraint firstItem="4YW-qD-reI" firstAttribute="centerX" secondItem="JoE-fU-Ohu" secondAttribute="centerX" id="9MZ-9W-LaW"/>
+                            <constraint firstItem="vGZ-UX-1Bf" firstAttribute="leading" secondItem="Gll-FM-S6D" secondAttribute="leading" constant="20" id="9mP-Es-ekW"/>
+                            <constraint firstItem="Gll-FM-S6D" firstAttribute="trailing" secondItem="Na1-oM-d1v" secondAttribute="trailing" constant="20" id="DXy-km-UVo"/>
+                            <constraint firstItem="Gll-FM-S6D" firstAttribute="trailing" secondItem="vGZ-UX-1Bf" secondAttribute="trailing" constant="20" id="EBC-42-Vsi"/>
+                            <constraint firstItem="Gll-FM-S6D" firstAttribute="trailing" secondItem="sOe-7U-Ef8" secondAttribute="trailing" constant="20" id="FKv-KZ-dxN"/>
+                            <constraint firstItem="3Jx-m9-P8e" firstAttribute="leading" secondItem="Gll-FM-S6D" secondAttribute="leading" constant="20" id="HPi-l8-dKw"/>
+                            <constraint firstItem="Gll-FM-S6D" firstAttribute="trailing" secondItem="3Jx-m9-P8e" secondAttribute="trailing" constant="20" id="Iuu-Nj-oQs"/>
+                            <constraint firstItem="sOe-7U-Ef8" firstAttribute="top" secondItem="Na1-oM-d1v" secondAttribute="bottom" constant="21" id="LbJ-b8-21w"/>
+                            <constraint firstItem="ffd-kk-3CB" firstAttribute="centerX" secondItem="3Jx-m9-P8e" secondAttribute="centerX" id="OqM-7e-jw9"/>
+                            <constraint firstItem="Gll-FM-S6D" firstAttribute="trailing" secondItem="JoE-fU-Ohu" secondAttribute="trailing" constant="20" id="Ppb-Sa-BKx"/>
+                            <constraint firstItem="vGO-Pr-SDw" firstAttribute="leading" secondItem="sOe-7U-Ef8" secondAttribute="leading" id="QVo-nU-Nrt"/>
+                            <constraint firstItem="vGO-Pr-SDw" firstAttribute="top" secondItem="sOe-7U-Ef8" secondAttribute="bottom" constant="7.5" id="Rgl-Ly-5vx"/>
+                            <constraint firstItem="ffd-kk-3CB" firstAttribute="top" secondItem="Gll-FM-S6D" secondAttribute="top" constant="84" id="SwT-4V-NAy"/>
+                            <constraint firstItem="vGO-Pr-SDw" firstAttribute="trailing" secondItem="sOe-7U-Ef8" secondAttribute="trailing" id="V9P-MM-dsQ"/>
+                            <constraint firstItem="Na1-oM-d1v" firstAttribute="leading" secondItem="Gll-FM-S6D" secondAttribute="leading" constant="20" id="iwQ-A9-ZPq"/>
+                            <constraint firstItem="Gll-FM-S6D" firstAttribute="bottom" secondItem="4YW-qD-reI" secondAttribute="bottom" constant="74" id="l6I-Q2-8Ex"/>
+                            <constraint firstItem="sOe-7U-Ef8" firstAttribute="leading" secondItem="Gll-FM-S6D" secondAttribute="leading" constant="20" id="od1-bF-hHb"/>
+                            <constraint firstItem="JoE-fU-Ohu" firstAttribute="top" secondItem="vGZ-UX-1Bf" secondAttribute="bottom" constant="8" symbolic="YES" id="pda-dI-mZH"/>
+                            <constraint firstItem="4YW-qD-reI" firstAttribute="leading" secondItem="Gll-FM-S6D" secondAttribute="leading" constant="133" id="wMK-Oy-Ab9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DiP-3a-nGQ"/>
+                    <connections>
+                        <outlet property="MakeOrderButton" destination="4YW-qD-reI" id="ykt-tU-c2j"/>
+                        <outlet property="MakeOrderTitle" destination="ffd-kk-3CB" id="jjh-Tu-vRh"/>
+                        <outlet property="labelOne" destination="3Jx-m9-P8e" id="FOQ-Lk-5d9"/>
+                        <outlet property="labelThree" destination="vGZ-UX-1Bf" id="84Q-7y-jEX"/>
+                        <outlet property="labelTwo" destination="sOe-7U-Ef8" id="V0k-wP-CRN"/>
+                        <outlet property="tfOne" destination="Na1-oM-d1v" id="Yt0-Ba-siZ"/>
+                        <outlet property="tfThree" destination="JoE-fU-Ohu" id="aql-0Z-GSL"/>
+                        <outlet property="tfTwo" destination="vGO-Pr-SDw" id="8Rg-Lu-opa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjd-sT-su5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3143" y="52"/>
+        </scene>
+        <!--Congratualations View Controller-->
+        <scene sceneID="tbS-eC-EgJ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="OCq-Qp-4Fs" customClass="CongratualationsViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jrx-yB-IaP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gifTwo.gif" translatesAutoresizingMaskIntoConstraints="NO" id="bZd-La-qkh">
+                                <rect key="frame" x="20" y="399" width="374" height="360"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!                 Wait for your order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdQ-Ob-SBJ">
+                                <rect key="frame" x="20" y="176" width="374" height="87"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ue9-RQ-x4h"/>
+                        <color key="backgroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bZd-La-qkh" firstAttribute="leading" secondItem="ue9-RQ-x4h" secondAttribute="leading" constant="20" id="1ZU-LH-h3F"/>
+                            <constraint firstItem="vdQ-Ob-SBJ" firstAttribute="leading" secondItem="ue9-RQ-x4h" secondAttribute="leading" constant="20" id="3le-KK-om3"/>
+                            <constraint firstItem="ue9-RQ-x4h" firstAttribute="trailing" secondItem="bZd-La-qkh" secondAttribute="trailing" constant="20" id="EvQ-2T-AVq"/>
+                            <constraint firstItem="bZd-La-qkh" firstAttribute="top" secondItem="vdQ-Ob-SBJ" secondAttribute="bottom" constant="136" id="ZfD-AV-td4"/>
+                            <constraint firstItem="vdQ-Ob-SBJ" firstAttribute="top" secondItem="ue9-RQ-x4h" secondAttribute="top" constant="88" id="esm-qf-Rdy"/>
+                            <constraint firstItem="ue9-RQ-x4h" firstAttribute="trailing" secondItem="vdQ-Ob-SBJ" secondAttribute="trailing" constant="20" id="fQ7-hr-jms"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uxs-oc-B1r">
+                        <barButtonItem key="rightBarButtonItem" title="Status" id="Fny-JJ-tGI">
+                            <color key="tintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="Y3W-A1-rxs" kind="show" id="LDv-ZZ-ZhN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="congratulationsImage" destination="bZd-La-qkh" id="kjb-yI-e6I"/>
+                        <outlet property="congratulationsLabel" destination="vdQ-Ob-SBJ" id="AHg-ni-0qM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxC-fe-mEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4833.3333333333339" y="51.5625"/>
+        </scene>
+        <!--Status-->
+        <scene sceneID="QMN-MH-7lQ">
+            <objects>
+                <viewController title="Status" modalPresentationStyle="fullScreen" id="eKF-so-ydf" customClass="StatusViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sMo-DC-JB4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order for a complete set" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3e-Wc-JmI">
+                                <rect key="frame" x="20" y="135" width="374" height="76.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The number of boxes: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJK-Zl-CbB">
+                                <rect key="frame" x="20" y="254.5" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Weight(kg): 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY8-2C-cLi">
+                                <rect key="frame" x="20" y="321" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.27615338563919067" green="0.16069498658180237" blue="0.063843488693237305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of dispatch: 01.11.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqd-4G-FEt">
+                                <rect key="frame" x="20" y="379" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O36-4N-sGg">
+                                <rect key="frame" x="117" y="663.5" width="180" height="80.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Make Another Order">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="smu-Ma-DpR" kind="show" id="QIv-0N-SSw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1DE-hQ-WIq"/>
+                        <color key="backgroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1DE-hQ-WIq" firstAttribute="trailing" secondItem="iJK-Zl-CbB" secondAttribute="trailing" constant="20" id="0Em-d5-6Pl"/>
+                            <constraint firstItem="1DE-hQ-WIq" firstAttribute="bottom" secondItem="O36-4N-sGg" secondAttribute="bottom" constant="118" id="1uD-xU-dhP"/>
+                            <constraint firstItem="j3e-Wc-JmI" firstAttribute="top" secondItem="1DE-hQ-WIq" secondAttribute="top" constant="47" id="8QM-wh-zV1"/>
+                            <constraint firstItem="Pqd-4G-FEt" firstAttribute="top" secondItem="oY8-2C-cLi" secondAttribute="bottom" constant="30" id="DQE-r9-wgS"/>
+                            <constraint firstItem="O36-4N-sGg" firstAttribute="leading" secondItem="1DE-hQ-WIq" secondAttribute="leading" constant="117" id="L7F-z6-i3L"/>
+                            <constraint firstItem="1DE-hQ-WIq" firstAttribute="trailing" secondItem="oY8-2C-cLi" secondAttribute="trailing" constant="20" id="O5k-YB-hKF"/>
+                            <constraint firstItem="Pqd-4G-FEt" firstAttribute="leading" secondItem="1DE-hQ-WIq" secondAttribute="leading" constant="20" id="XAY-Ss-xnF"/>
+                            <constraint firstItem="oY8-2C-cLi" firstAttribute="top" secondItem="iJK-Zl-CbB" secondAttribute="bottom" constant="38.5" id="ajU-Zp-VPB"/>
+                            <constraint firstItem="iJK-Zl-CbB" firstAttribute="top" secondItem="j3e-Wc-JmI" secondAttribute="bottom" constant="43" id="eua-pU-6Xj"/>
+                            <constraint firstItem="O36-4N-sGg" firstAttribute="top" secondItem="Pqd-4G-FEt" secondAttribute="bottom" constant="256.5" id="gI8-iZ-vWv"/>
+                            <constraint firstItem="1DE-hQ-WIq" firstAttribute="trailing" secondItem="Pqd-4G-FEt" secondAttribute="trailing" constant="20" id="hmE-zy-zyt"/>
+                            <constraint firstItem="j3e-Wc-JmI" firstAttribute="leading" secondItem="1DE-hQ-WIq" secondAttribute="leading" constant="20" id="hsQ-wu-ska"/>
+                            <constraint firstItem="1DE-hQ-WIq" firstAttribute="trailing" secondItem="j3e-Wc-JmI" secondAttribute="trailing" constant="20" id="lHM-7j-Yti"/>
+                            <constraint firstItem="1DE-hQ-WIq" firstAttribute="trailing" secondItem="O36-4N-sGg" secondAttribute="trailing" constant="117" id="q9t-KR-BZO"/>
+                            <constraint firstItem="iJK-Zl-CbB" firstAttribute="leading" secondItem="1DE-hQ-WIq" secondAttribute="leading" constant="20" id="qeF-5T-Xr4"/>
+                            <constraint firstItem="oY8-2C-cLi" firstAttribute="leading" secondItem="1DE-hQ-WIq" secondAttribute="leading" constant="20" id="uki-zA-uwf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qu7-BK-cnL"/>
+                    <connections>
+                        <outlet property="labelOne" destination="iJK-Zl-CbB" id="g0w-Zn-bVe"/>
+                        <outlet property="labelThree" destination="Pqd-4G-FEt" id="958-O5-zTe"/>
+                        <outlet property="labelTwo" destination="oY8-2C-cLi" id="CNb-QO-Vrx"/>
+                        <outlet property="statusLabel" destination="j3e-Wc-JmI" id="A9R-r2-o0H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ir5-X2-hDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631.8840579710147" y="811.60714285714278"/>
+        </scene>
+        <!--Second Status View Controller-->
+        <scene sceneID="cGK-rq-d93">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="iro-SG-38d" customClass="SecondStatusViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zfh-uS-gqu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order is on the way" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-gy-crO">
+                                <rect key="frame" x="20" y="144" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The number of boxes: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSB-P7-seu">
+                                <rect key="frame" x="20" y="226" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Weight(kg): 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcd-ym-QNI">
+                                <rect key="frame" x="20" y="292" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.27615338563919067" green="0.16069498658180237" blue="0.063843488693237305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of dispatch: 01.11.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0T-ay-Rpn">
+                                <rect key="frame" x="20" y="350" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH3-gS-fyO">
+                                <rect key="frame" x="117" y="635" width="180" height="68.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Make Another Order">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="smu-Ma-DpR" kind="show" id="yTz-Tx-X4R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ffs-oM-7b9"/>
+                        <color key="backgroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pSB-P7-seu" firstAttribute="leading" secondItem="Ffs-oM-7b9" secondAttribute="leading" constant="20" id="034-Jg-udu"/>
+                            <constraint firstItem="UH3-gS-fyO" firstAttribute="leading" secondItem="Ffs-oM-7b9" secondAttribute="leading" constant="117" id="Cfg-pa-Xr0"/>
+                            <constraint firstItem="pSB-P7-seu" firstAttribute="top" secondItem="eRC-gy-crO" secondAttribute="bottom" constant="43.5" id="IWE-UR-42X"/>
+                            <constraint firstItem="eRC-gy-crO" firstAttribute="top" secondItem="Ffs-oM-7b9" secondAttribute="top" constant="56" id="LX3-vN-WMO"/>
+                            <constraint firstItem="J0T-ay-Rpn" firstAttribute="leading" secondItem="Ffs-oM-7b9" secondAttribute="leading" constant="20" id="XrI-zq-x8h"/>
+                            <constraint firstItem="Ffs-oM-7b9" firstAttribute="trailing" secondItem="eRC-gy-crO" secondAttribute="trailing" constant="20" id="ZPP-02-dZf"/>
+                            <constraint firstItem="Ffs-oM-7b9" firstAttribute="trailing" secondItem="UH3-gS-fyO" secondAttribute="trailing" constant="117" id="cJk-LG-0CI"/>
+                            <constraint firstItem="Ffs-oM-7b9" firstAttribute="trailing" secondItem="Xcd-ym-QNI" secondAttribute="trailing" constant="20" id="e9p-XL-fm2"/>
+                            <constraint firstItem="Ffs-oM-7b9" firstAttribute="trailing" secondItem="pSB-P7-seu" secondAttribute="trailing" constant="20" id="hS9-YO-Kvg"/>
+                            <constraint firstItem="UH3-gS-fyO" firstAttribute="top" secondItem="J0T-ay-Rpn" secondAttribute="bottom" constant="257" id="lAx-O4-Kol"/>
+                            <constraint firstItem="eRC-gy-crO" firstAttribute="leading" secondItem="Ffs-oM-7b9" secondAttribute="leading" constant="20" id="lBg-fP-VVU"/>
+                            <constraint firstItem="Xcd-ym-QNI" firstAttribute="top" secondItem="pSB-P7-seu" secondAttribute="bottom" constant="38" id="rgT-GX-beb"/>
+                            <constraint firstItem="J0T-ay-Rpn" firstAttribute="top" secondItem="Xcd-ym-QNI" secondAttribute="bottom" constant="30" id="tbp-ml-F9D"/>
+                            <constraint firstItem="Xcd-ym-QNI" firstAttribute="leading" secondItem="Ffs-oM-7b9" secondAttribute="leading" constant="20" id="tv7-ly-hr5"/>
+                            <constraint firstItem="Ffs-oM-7b9" firstAttribute="trailing" secondItem="J0T-ay-Rpn" secondAttribute="trailing" constant="20" id="xaH-tr-Ta8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8OD-EX-RKr">
+                        <barButtonItem key="rightBarButtonItem" title="Status" id="fxf-1m-H3B">
+                            <color key="tintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="y4A-LF-FHF" kind="show" id="MaY-LB-vOs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonOne" destination="UH3-gS-fyO" id="O0e-nR-WAi"/>
+                        <outlet property="labelFour" destination="J0T-ay-Rpn" id="psP-Cc-oxX"/>
+                        <outlet property="labelOne" destination="eRC-gy-crO" id="Sew-G9-h6G"/>
+                        <outlet property="labelThree" destination="Xcd-ym-QNI" id="HK3-Rf-We2"/>
+                        <outlet property="labelTwo" destination="pSB-P7-seu" id="gyw-Eu-1hm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rol-ST-hBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142" y="812"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="Qvc-0n-bew">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="y4A-LF-FHF" customClass="ThirdViewController" customModule="Coffee_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e16-DF-Bcu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order has been delivered" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VI-o9-soW">
+                                <rect key="frame" x="20" y="190" width="374" height="76.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The number of boxes: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAS-bN-A8b">
+                                <rect key="frame" x="20" y="304" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Weight(kg): 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSD-Mu-wXa">
+                                <rect key="frame" x="20" y="365" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.27615338563919067" green="0.16069498658180237" blue="0.063843488693237305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of dispatch: 01.11.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-dW-Hv2">
+                                <rect key="frame" x="20" y="429" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGn-ah-V2f">
+                                <rect key="frame" x="119" y="708" width="177" height="68.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Make Another Order">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ZIr-G2-0g4" kind="show" id="QjD-rS-4q6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pXS-xi-MVI"/>
+                        <color key="backgroundColor" red="0.073143757879734039" green="0.28043144941329956" blue="0.12679633498191833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pXS-xi-MVI" firstAttribute="trailing" secondItem="zGn-ah-V2f" secondAttribute="trailing" constant="118" id="2tN-sr-ImZ"/>
+                            <constraint firstItem="RSD-Mu-wXa" firstAttribute="leading" secondItem="pXS-xi-MVI" secondAttribute="leading" constant="20" id="7m2-l7-db3"/>
+                            <constraint firstItem="2VI-o9-soW" firstAttribute="leading" secondItem="pXS-xi-MVI" secondAttribute="leading" constant="20" id="9cy-Kh-1Lb"/>
+                            <constraint firstItem="0Gf-dW-Hv2" firstAttribute="top" secondItem="RSD-Mu-wXa" secondAttribute="bottom" constant="36" id="Bp0-51-gBs"/>
+                            <constraint firstItem="pXS-xi-MVI" firstAttribute="trailing" secondItem="2VI-o9-soW" secondAttribute="trailing" constant="20" id="CwV-ZR-l8W"/>
+                            <constraint firstItem="0Gf-dW-Hv2" firstAttribute="leading" secondItem="pXS-xi-MVI" secondAttribute="leading" constant="20" id="Iv5-cX-TxM"/>
+                            <constraint firstItem="zGn-ah-V2f" firstAttribute="leading" secondItem="pXS-xi-MVI" secondAttribute="leading" constant="119" id="WeJ-LT-Kju"/>
+                            <constraint firstItem="pXS-xi-MVI" firstAttribute="trailing" secondItem="0Gf-dW-Hv2" secondAttribute="trailing" constant="20" id="XmC-nh-o4C"/>
+                            <constraint firstItem="pXS-xi-MVI" firstAttribute="trailing" secondItem="SAS-bN-A8b" secondAttribute="trailing" constant="20" id="bPQ-ur-rJ5"/>
+                            <constraint firstItem="RSD-Mu-wXa" firstAttribute="top" secondItem="SAS-bN-A8b" secondAttribute="bottom" constant="33" id="c2S-eL-fv5"/>
+                            <constraint firstItem="SAS-bN-A8b" firstAttribute="top" secondItem="2VI-o9-soW" secondAttribute="bottom" constant="37.5" id="ePA-QM-JE5"/>
+                            <constraint firstItem="SAS-bN-A8b" firstAttribute="leading" secondItem="pXS-xi-MVI" secondAttribute="leading" constant="20" id="lbd-Ii-7fn"/>
+                            <constraint firstItem="2VI-o9-soW" firstAttribute="top" secondItem="pXS-xi-MVI" secondAttribute="top" constant="102" id="uRX-Ki-xps"/>
+                            <constraint firstItem="pXS-xi-MVI" firstAttribute="trailing" secondItem="RSD-Mu-wXa" secondAttribute="trailing" constant="20" id="vxW-vd-17w"/>
+                            <constraint firstItem="zGn-ah-V2f" firstAttribute="top" secondItem="0Gf-dW-Hv2" secondAttribute="bottom" constant="251" id="w9w-qp-Ui8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0UM-Tl-raa"/>
+                    <connections>
+                        <outlet property="buttonOne" destination="zGn-ah-V2f" id="ELp-Cy-kWa"/>
+                        <outlet property="labelFour" destination="0Gf-dW-Hv2" id="veb-ZC-2cS"/>
+                        <outlet property="labelOne" destination="2VI-o9-soW" id="b5q-gg-qSu"/>
+                        <outlet property="labelThree" destination="RSD-Mu-wXa" id="ewy-DD-tz5"/>
+                        <outlet property="labelTwo" destination="SAS-bN-A8b" id="Koz-vN-1UB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Idp-Av-B7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4831.884057971015" y="811.60714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IPL-9A-7px">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Vww-6C-GcV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gZf-fw-Pti"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ORB-FN-Eq5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="smu-Ma-DpR" kind="relationship" relationship="rootViewController" id="Tx0-lx-Xe9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SiE-vt-SGi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721.73913043478262" y="51.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lbm-KS-fyC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="b2s-6D-fst" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="jNC-2r-nmU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6CC-LJ-0jD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OCq-Qp-4Fs" kind="relationship" relationship="rootViewController" id="iTd-TX-gV9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTX-Fu-e6M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3923.188405797102" y="51.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7qf-sj-6HD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Y3W-A1-rxs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lAw-di-T4F"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qe0-0A-8A7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eKF-so-ydf" kind="relationship" relationship="rootViewController" id="Vvf-PQ-1Xv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMd-0t-4Mv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="812"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8iK-PW-4Kb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Md7-F6-u4t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YYC-ip-ckh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zdw-UW-WUh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iro-SG-38d" kind="relationship" relationship="rootViewController" id="1Xr-Rm-egc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQ2-CF-r0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2379.7101449275365" y="811.60714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a1E-cC-TzZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Rsv-5c-d1J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aXc-K8-EyF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="unK-Zp-fzp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98833423852920532" green="0.67429071664810181" blue="0.010902433656156063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="linkColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y4A-LF-FHF" kind="relationship" relationship="rootViewController" id="Phh-iw-HlM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sw9-s8-a9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3921.739130434783" y="811.60714285714278"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MaY-LB-vOs"/>
+        <segue reference="1Xr-Rm-egc"/>
+        <segue reference="yTz-Tx-X4R"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="coffeeGif.gif" width="480" height="360"/>
+        <image name="coffeeOne" width="150" height="200"/>
+        <image name="gifTwo.gif" width="360" height="360"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
